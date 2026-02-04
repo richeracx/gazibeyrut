@@ -1,0 +1,1302 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sestra Coffee - Modern Kahve ve Tatlı Deneyiminiz. Başakşehir'de en iyi kahveler, glutensiz tatlılar ve ferah ortam."
+    />
+    <title>Sestra Coffee | Modern Coffee Shop</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-container">
+        <div class="logo-container">
+          <img src="logo1.png" alt="Sestra Coffee Logo" class="main-logo" />
+        </div>
+        <nav class="navbar">
+          <ul class="nav-links">
+            <li><a href="#hero">Anasayfa</a></li>
+            <li><a href="#menu">Menü</a></li>
+            <li><a href="#location">Konum & İletişim</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile MenuOverlay -->
+    <div class="mobile-menu-overlay">
+      <i class="fas fa-times close-menu"></i>
+      <ul class="mobile-nav-links">
+        <li><a href="#hero">Anasayfa</a></li>
+        <li><a href="#menu">Menü</a></li>
+        <li><a href="#location">Konum & İletişim</a></li>
+        <li>
+          <a
+            href="javascript:void(0)"
+            onclick="
+              document
+                .querySelector('.mobile-menu-overlay')
+                .classList.remove('active');
+              document
+                .getElementById('whatsappCartBtn')
+                .scrollIntoView({ behavior: 'smooth' });
+            "
+            ><i class="fab fa-whatsapp"></i> Siparişi Tamamla</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Sestra Coffee</h1>
+        <p class="hero-slogan">
+          Kahve tutkusu, modern lezzetler ve eşsiz bir atmosfer.
+        </p>
+        <a href="#menu" class="btn btn-primary">Menüyü Keşfet</a>
+      </div>
+      <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section menu-section">
+      <div class="container">
+        <h2 class="section-title">Menü</h2>
+
+        <div class="menu-grid">
+          <!-- Soğuk İçecekler -->
+          <div class="menu-category-block">
+            <h3 class="category-title">Soğuk İçecekler</h3>
+            <div class="cards-wrapper">
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Wildberry</h4>
+                  <p>Orman meyveleri</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">295.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Wildberry', 295.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Berry Hibiscus</h4>
+                  <p>Hibiskus, orman meyvesi</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">295.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Berry Hibiscus', 295.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Blue Rashberry</h4>
+                  <p>Mavi frambuaz</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">295.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Blue Rashberry', 295.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Mango & Dragon Fruit</h4>
+                  <p>Soğuk servis edilir</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">295.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Mango & Dragon Fruit', 295.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Cactus</h4>
+                  <p>Yeşil elma</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">295.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Cactus', 295.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Passion & Guava Base</h4>
+                  <p>Çarkıfelek, guava meyvesi</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">295.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Passion & Guava Base', 295.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Cool Lime</h4>
+                  <p>Soğuk servis edilir</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">295.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Cool Lime', 295.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Sakura & White Peach</h4>
+                  <p>Sakura çiçeği, beyaz şeftali</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">295.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Sakura & White Peach', 295.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kruvasanlar -->
+          <div class="menu-category-block">
+            <h3 class="category-title">Kruvasanlar</h3>
+            <div class="cards-wrapper">
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Meyveli Kruvasan</h4>
+                  <p>Özel pastacı kreması, çilek, muz, çikolata sos, fındık</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">445.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Meyveli Kruvasan', 445.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Tereyağlı Kruvasan Sandviç</h4>
+                  <p>Günlük hazırlanır</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">435.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Tereyağlı Kruvasan Sandviç', 435.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Kruvasan (Sade)</h4>
+                  <p>Tek kişilik</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">250.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Kruvasan (Sade)', 250.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Glutensiz ve Rafine Şekersiz Ürünler -->
+          <div class="menu-category-block">
+            <h3 class="category-title">Glutensiz ve Rafine Şekersiz</h3>
+            <div class="cards-wrapper">
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Yaban Mersinli Cookies</h4>
+                  <p>Yaban mersini, vegan çikolata ve yulaf</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">198.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Yaban Mersinli Cookies', 198.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Glütensiz Banana Bread</h4>
+                  <p>Muz, çikolata (Çölyak için uygun değildir)</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">295.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Glütensiz Banana Bread', 295.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Glütensiz Yulaf Cup</h4>
+                  <p>Rafine şeker içermez</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">385.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Glütensiz Yulaf Cup', 385.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Glütensiz Çilekli Mag</h4>
+                  <p>Hurma sulu özel mag kreması, bisküvi tozu, çilek</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">370.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Glütensiz Çilekli Mag', 370.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Glütensiz Üç Peynirli Kiş</h4>
+                  <p>3 çeşit peynir, fesleğen, domates</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">315.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Glütensiz Üç Peynirli Kiş', 315.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Glütensiz Tuzlu Muffin</h4>
+                  <p>1 kişilik</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">215.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Glütensiz Tuzlu Muffin', 215.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Granola</h4>
+                  <p>El yapımı</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">180.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Granola', 180.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Glütensiz Yulaf Tart</h4>
+                  <p>Rafine şeker içermez</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">330.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Glütensiz Yulaf Tart', 330.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Glütensiz Vegan Bar</h4>
+                  <p>Fıstıklı hurma bar, rafine şeker içermez</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">275.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Glütensiz Vegan Bar', 275.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Glütensiz Kış Trüfü</h4>
+                  <p>Hurma, fındık, havuç, Hindistan cevizi, vegan çikolata</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">215.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Glütensiz Kış Trüfü', 215.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Granola Bowl</h4>
+                  <p>Meyveli yoğurt, el yapımı granola</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">405.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Granola Bowl', 405.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Glütensiz Tiramisu</h4>
+                  <p>Espresso, kedi dili, mascarpone</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">390.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Glütensiz Tiramisu', 390.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Çikolatalı Vişneli Brownie</h4>
+                  <p>Tahinli, sıcak tüketilmelidir</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">370.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Çikolatalı Vişneli Brownie', 370.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Fıstık Ezmeli Karamelli Bar</h4>
+                  <p>1 kişilik</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">285.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Fıstık Ezmeli Karamelli Bar', 285.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sıcak Kahveler -->
+          <div class="menu-category-block">
+            <h3 class="category-title">Sıcak Kahveler</h3>
+            <div class="cards-wrapper">
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Salted Karamel Latte</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">280.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Salted Karamel Latte', 280.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Espresso Macchiato</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">170.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Espresso Macchiato', 170.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Cortado</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">205.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Cortado', 205.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Küçük Boy (Espresso/Filtre)</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">160.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Küçük Boy (Espresso/Filtre)', 160.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Lotus Latte</h4>
+                  <p>Espresso, Lotus, süt</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">280.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Lotus Latte', 280.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Flat White</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">210.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Flat White', 210.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Cappuccino</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">220.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Cappuccino', 220.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Karamel Latte</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">280.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Karamel Latte', 280.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Americano</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">185.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Americano', 185.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Latte</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">220.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Latte', 220.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Mocha</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">280.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Mocha', 280.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Toffeenut Latte</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">280.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Toffeenut Latte', 280.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Matcha Latte</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">290.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Matcha Latte', 290.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Vanilyalı Latte</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">280.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Vanilyalı Latte', 280.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Türk Kahvesi</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">160.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Türk Kahvesi', 160.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>White Mocha</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">280.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('White Mocha', 280.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Filtre Kahve</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">185.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Filtre Kahve', 185.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sıcak İçecekler -->
+          <div class="menu-category-block">
+            <h3 class="category-title">Sıcak İçecekler</h3>
+            <div class="cards-wrapper">
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Green Mango</h4>
+                  <p>Mango, yeşil çay, elma</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">190.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Green Mango', 190.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Green Tea</h4>
+                  <p>Yeşil çay</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">190.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Green Tea', 190.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Berry</h4>
+                  <p>Karadut, böğürtlen, hibiscus</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">190.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Berry', 190.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Salep</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">230.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Salep', 230.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Winter Fell</h4>
+                  <p>Hibiscus, tarçın, kuşburnu</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">190.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Winter Fell', 190.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Beauty Tea</h4>
+                  <p>Beyaz çay, şeftali, Isparta gülü</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">190.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Beauty Tea', 190.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Siyah Çay</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">85.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Siyah Çay', 85.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Purple Sky</h4>
+                  <p>Mavi sarmaşık çiçeği, lime, çilek</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">190.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Purple Sky', 190.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Good Night</h4>
+                  <p>Melisalı uyku çayı</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">190.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Good Night', 190.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Sıcak Çikolata</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">230.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Sıcak Çikolata', 230.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Su ve Maden Suyu -->
+          <div class="menu-category-block">
+            <h3 class="category-title">Su ve Maden Suyu</h3>
+            <div class="cards-wrapper">
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Maden Suyu</h4>
+                  <p>20 Cl.</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">65.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Maden Suyu', 65.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Premium Su</h4>
+                  <p>40 Cl.</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">65.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Premium Su', 65.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soğuk Kahveler -->
+          <div class="menu-category-block">
+            <h3 class="category-title">Soğuk Kahveler</h3>
+            <div class="cards-wrapper">
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Iced Vanilyalı Latte</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">295.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Iced Vanilyalı Latte', 295.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Iced Lotus Latte</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">295.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Iced Lotus Latte', 295.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Iced Caramel Latte</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">295.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Iced Caramel Latte', 295.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Iced Americano</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">185.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Iced Americano', 185.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Iced Toffeenut Latte</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">295.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Iced Toffeenut Latte', 295.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Iced Strawberry Matcha Latte</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">325.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Iced Strawberry Matcha Latte', 325.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Iced Caramel Macchiato</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">295.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Iced Caramel Macchiato', 295.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Iced Latte</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">230.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Iced Latte', 230.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Iced Matcha Latte</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">310.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Iced Matcha Latte', 310.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Iced Cappuccino</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">230.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Iced Cappuccino', 230.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Iced Filtre Kahve</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">185.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Iced Filtre Kahve', 185.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Iced Mocha</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">295.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Iced Mocha', 295.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Iced Salted Caramel Latte</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">295.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Iced Salted Caramel Latte', 295.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Iced White Mocha</h4>
+                </div>
+                <div class="card-action">
+                  <span class="price">295.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Iced White Mocha', 295.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tatlılar -->
+          <div class="menu-category-block">
+            <h3 class="category-title">Tatlılar</h3>
+            <div class="cards-wrapper">
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Brownie Cookies</h4>
+                  <p>Sıcak tüketilmelidir</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">195.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Brownie Cookies', 195.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Spoonful</h4>
+                  <p>Özel krema, kek parçaları, sütlü çikolata</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">365.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Spoonful', 365.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Bask Cheesecake</h4>
+                  <p>Özel çikolata sosu ile</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">425.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Bask Cheesecake', 425.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Fıstık</h4>
+                  <p>Tek kişilik</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">430.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Fıstık', 430.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Çilekli Pasta</h4>
+                  <p>Tek kişilik</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">330.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Çilekli Pasta', 330.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Cream Puff</h4>
+                  <p>Kıtır şeker, çikolata ganajı, çilek</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">385.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Cream Puff', 385.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <div class="card-info">
+                  <h4>Fıstıklı Bask Cheesecake</h4>
+                  <p>Çikolata ile servis edilir</p>
+                </div>
+                <div class="card-action">
+                  <span class="price">430.00 ₺</span>
+                  <button
+                    class="btn-fat-turquoise"
+                    onclick="addToCart('Fıstıklı Bask Cheesecake', 430.0)"
+                  >
+                    <i class="fas fa-plus"></i> EKLE
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="location" class="section location-section">
+      <div class="container">
+        <h2 class="section-title">Konum & İletişim</h2>
+        <div class="location-content">
+          <div class="address-box">
+            <i class="fas fa-map-marker-alt address-icon"></i>
+            <h3>Adres & İletişim</h3>
+            <p>
+              <strong>Telefon:</strong> 0533 246 80 20<br /><br />
+              Başakşehir, Mehmet Akif Ersoy Cd. No:1 D:1-4 nolu dükkan,<br />34480
+              Başakşehir/İstanbul
+            </p>
+
+            <div class="contact-buttons">
+              <a
+                href="https://www.instagram.com/sestracoffee/"
+                target="_blank"
+                class="btn btn-instagram"
+              >
+                <i class="fab fa-instagram"></i> Instagram
+              </a>
+              <!-- This is the MAIN cart button now -->
+              <a
+                href="javascript:void(0)"
+                class="btn btn-whatsapp"
+                id="whatsappCartBtn"
+              >
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a>
+            </div>
+          </div>
+          <div class="map-box">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.281861963969!2d28.7863401!3d41.1078368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caafc47d335f37%3A0xddc1ac7ab7c948a2!2sSestra%20Coffee!5e0!3m2!1str!2str!4v1717580000000!5m2!1str!2str"
+              width="100%"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <img src="logo2.png" alt="Footer Logo" class="footer-logo" />
+          <span class="web-service-text">Web Hizmetleri</span>
+        </div>
+        <p class="copyright">
+          &copy; 2026 Sestra Coffee. Tüm hakları saklıdır.
+        </p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
