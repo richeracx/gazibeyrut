@@ -685,8 +685,24 @@ h4 {
   }
 
   .hero {
-    min-height: 70vh;
-    padding-top: 60px;
+    min-height: 100vh; /* Full viewport height for mobile too */
+    padding-top: 80px;
+    align-items: flex-start; /* Align to top to avoid cutting off */
+  }
+
+  .hero-content {
+    margin-top: 40px; /* Add some spacing from top */
+  }
+
+  .hero-logo-large {
+    width: 120px; /* Smaller logo for mobile */
+    height: 120px;
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-size: 2.8rem; /* Smaller title */
+    margin-bottom: 15px;
   }
 
   .hero-bg-circle {
@@ -698,7 +714,7 @@ h4 {
   }
 
   .section-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 40px;
   }
 
@@ -708,6 +724,7 @@ h4 {
     margin: 0 auto;
   }
 
+  /* Make floating cart more compact on mobile */
   .floating-cart {
     left: 20px;
     right: 20px;
@@ -718,6 +735,8 @@ h4 {
   #whatsappCartBtn {
     justify-content: center;
     width: 100%;
+    padding: 15px 20px; /* Slightly smaller padding */
+    font-size: 1rem;
   }
 
   .contact-actions {
@@ -725,6 +744,6 @@ h4 {
   }
 
   .footer {
-    padding-bottom: 100px; /* Ensure button doesn't cover footer text */
+    padding-bottom: 140px; /* Increased padding to clear the button */
   }
 }
