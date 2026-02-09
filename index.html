@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Manton Cafe - Restoran & Cafe. Taze lezzetler, huzurlu bir atmosfer. Yemek, kitap ve etkinliklerin buluşma noktası."
+      content="Gazi Beyrut Restaurant - Geleneksel lezzetler, modern sunum. İstanbul'un en seçkin mutfağı."
     />
-    <title>Manton Cafe | Restoran & Cafe</title>
+    <title>Gazi Beyrut Restaurant | Lezzetin Adresi</title>
 
-    <link rel="icon" href="manton.png" type="image/png" />
+    <link rel="icon" href="gazibeyrut.jpg" type="image/jpeg" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,7 +32,8 @@
     <header class="header">
       <div class="container header-container">
         <div class="logo-container">
-          <img src="manton.png" alt="Manton Cafe Logosu" class="main-logo" />
+          <img src="gazibeyrut.jpg" alt="Gazi Beyrut Logo" class="main-logo" />
+          <span class="brand-name">Gazi Beyrut</span>
         </div>
         <nav class="navbar">
           <ul class="nav-links">
@@ -53,147 +55,204 @@
         <li><a href="#hero">Anasayfa</a></li>
         <li><a href="#menu">Menü</a></li>
         <li><a href="#location">İletişim</a></li>
-        <li>
-          <a
-            href="javascript:void(0)"
-            onclick="
-              document
-                .querySelector('.mobile-menu-overlay')
-                .classList.remove('active');
-              document
-                .getElementById('whatsappCartBtn')
-                .scrollIntoView({ behavior: 'smooth' });
-            "
-            ><i class="fab fa-whatsapp"></i> Siparişi Tamamla</a
-          >
-        </li>
       </ul>
     </div>
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
+      <div class="hero-bg-circle circle-1"></div>
+      <div class="hero-bg-circle circle-2"></div>
+
       <div class="hero-content">
-        <h1 class="hero-title">MANTON CAFE</h1>
-        <p class="hero-slogan">RESTORAN & CAFE</p>
-        <a href="#menu" class="btn btn-primary">Menüyü Keşfet</a>
+        <img src="gazibeyrut.jpg" alt="Gazi Beyrut" class="hero-logo-large" />
+        <h1 class="hero-title">GAZİ BEYRUT</h1>
+        <p class="hero-slogan">EŞSİZ LEZZET & KALİTE</p>
+        <a href="#menu" class="btn btn-primary">
+          <i class="fas fa-utensils"></i> Menüyü Keşfet
+        </a>
       </div>
     </section>
 
     <!-- Menu Section -->
     <section id="menu" class="section menu-section">
       <div class="container">
-        <h2 class="section-title">Menümüz</h2>
+        <h2 class="section-title">Özel Menümüz</h2>
 
         <div class="menu-grid">
-          <!-- Placeholder Category -->
+          <!-- Category 1 -->
           <div class="menu-category-block">
-            <h3 class="category-title">Özel Lezzetler</h3>
+            <h3 class="category-title">Ana Yemekler</h3>
             <div class="cards-wrapper">
               <!-- Item 1 -->
               <div class="menu-card">
-                <div class="card-info">
-                  <h4>Ürün 1</h4>
-                  <p>Manton Cafe'ye özel hazırlanan taze bir lezzet.</p>
+                <div class="card-image-placeholder">
+                  <!-- Placeholder Image: Kebab/Grill -->
+                  <img
+                    src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80"
+                    alt="Kebap Çeşitleri"
+                  />
                 </div>
-                <div class="card-action">
-                  <span class="price">0.00 ₺</span>
-                  <button
-                    class="btn-fat-turquoise"
-                    onclick="addToCart('Ürün 1', 0.0)"
-                  >
-                    <i class="fas fa-plus"></i> EKLE
-                  </button>
+                <div class="card-content">
+                  <div class="card-info">
+                    <h4 class="card-title">Karışık Izgara</h4>
+                    <p class="card-desc">
+                      Özel baharatlarla marine edilmiş kuzu şiş, tavuk şiş ve
+                      adana kebap.
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <span class="price">450 ₺</span>
+                    <div class="card-action">
+                      <button
+                        class="btn-add"
+                        onclick="addToCart('Karışık Izgara', 450)"
+                      >
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <!-- Item 2 -->
               <div class="menu-card">
-                <div class="card-info">
-                  <h4>Ürün 2</h4>
-                  <p>Doğal malzemelerle günlük olarak hazırlanır.</p>
+                <div class="card-image-placeholder">
+                  <img
+                    src="https://placehold.co/600x400/png?text=Lahmacun"
+                    alt="Lahmacun"
+                  />
                 </div>
-                <div class="card-action">
-                  <span class="price">0.00 ₺</span>
-                  <button
-                    class="btn-fat-turquoise"
-                    onclick="addToCart('Ürün 2', 0.0)"
-                  >
-                    <i class="fas fa-plus"></i> EKLE
-                  </button>
+                <div class="card-content">
+                  <div class="card-info">
+                    <h4 class="card-title">Lahmacun</h4>
+                    <p class="card-desc">
+                      Odun ateşinde pişen, bol malzemeli ve çıtır lahmacun.
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <span class="price">120 ₺</span>
+                    <div class="card-action">
+                      <button
+                        class="btn-add"
+                        onclick="addToCart('Lahmacun', 120)"
+                      >
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <!-- Item 3 -->
               <div class="menu-card">
-                <div class="card-info">
-                  <h4>Ürün 3</h4>
-                  <p>En sevilen imza tariflerimizden biri.</p>
+                <div class="card-image-placeholder">
+                  <img
+                    src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80"
+                    alt="Pizza"
+                  />
                 </div>
-                <div class="card-action">
-                  <span class="price">0.00 ₺</span>
-                  <button
-                    class="btn-fat-turquoise"
-                    onclick="addToCart('Ürün 3', 0.0)"
-                  >
-                    <i class="fas fa-plus"></i> EKLE
-                  </button>
-                </div>
-              </div>
-
-              <!-- Item 4 -->
-              <div class="menu-card">
-                <div class="card-info">
-                  <h4>Ürün 4</h4>
-                  <p>Tadına doyamayacağınız eşsiz bir deneyim.</p>
-                </div>
-                <div class="card-action">
-                  <span class="price">0.00 ₺</span>
-                  <button
-                    class="btn-fat-turquoise"
-                    onclick="addToCart('Ürün 4', 0.0)"
-                  >
-                    <i class="fas fa-plus"></i> EKLE
-                  </button>
+                <div class="card-content">
+                  <div class="card-info">
+                    <h4 class="card-title">Beyrut Pizza</h4>
+                    <p class="card-desc">
+                      Özel sosumuz, sucuk, zeytin ve taze sebzelerle.
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <span class="price">320 ₺</span>
+                    <div class="card-action">
+                      <button
+                        class="btn-add"
+                        onclick="addToCart('Beyrut Pizza', 320)"
+                      >
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Placeholder Category 2 -->
+          <!-- Category 2 -->
           <div class="menu-category-block">
-            <h3 class="category-title">Klasik Tatlar</h3>
+            <h3 class="category-title">Tatlılar & İçecekler</h3>
             <div class="cards-wrapper">
+              <!-- Item 4 -->
+              <div class="menu-card">
+                <div class="card-image-placeholder">
+                  <img
+                    src="https://images.unsplash.com/photo-1579372786545-d24232daf58c?auto=format&fit=crop&w=600&q=80"
+                    alt="Cupcake"
+                  />
+                </div>
+                <div class="card-content">
+                  <div class="card-info">
+                    <h4 class="card-title">Cupcake</h4>
+                    <p class="card-desc">lezzetli Cupcake.</p>
+                  </div>
+                  <div class="card-footer">
+                    <span class="price">200 ₺</span>
+                    <div class="card-action">
+                      <button
+                        class="btn-add"
+                        onclick="addToCart('Cupcake', 200)"
+                      >
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <!-- Item 5 -->
               <div class="menu-card">
-                <div class="card-info">
-                  <h4>Ürün 5</h4>
-                  <p>Vazgeçilmez bir Manton Cafe klasiği.</p>
+                <div class="card-image-placeholder">
+                  <img
+                    src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80"
+                    alt="soda"
+                  />
                 </div>
-                <div class="card-action">
-                  <span class="price">0.00 ₺</span>
-                  <button
-                    class="btn-fat-turquoise"
-                    onclick="addToCart('Ürün 5', 0.0)"
-                  >
-                    <i class="fas fa-plus"></i> EKLE
-                  </button>
+                <div class="card-content">
+                  <div class="card-info">
+                    <h4 class="card-title">Soda</h4>
+                    <p class="card-desc">ferahlatıcı soda.</p>
+                  </div>
+                  <div class="card-footer">
+                    <span class="price">40 ₺</span>
+                    <div class="card-action">
+                      <button class="btn-add" onclick="addToCart('Soda', 40)">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <!-- Item 6 -->
               <div class="menu-card">
-                <div class="card-info">
-                  <h4>Ürün 6</h4>
-                  <p>Günün her saati keyifle tüketebilirsiniz.</p>
+                <div class="card-image-placeholder">
+                  <img
+                    src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80"
+                    alt="cocktail"
+                  />
                 </div>
-                <div class="card-action">
-                  <span class="price">0.00 ₺</span>
-                  <button
-                    class="btn-fat-turquoise"
-                    onclick="addToCart('Ürün 6', 0.0)"
-                  >
-                    <i class="fas fa-plus"></i> EKLE
-                  </button>
+                <div class="card-content">
+                  <div class="card-info">
+                    <h4 class="card-title">Cocktail</h4>
+                    <p class="card-desc">ferahlatıcı cocktail.</p>
+                  </div>
+                  <div class="card-footer">
+                    <span class="price">80 ₺</span>
+                    <div class="card-action">
+                      <button
+                        class="btn-add"
+                        onclick="addToCart('Cocktail', 80)"
+                      >
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -205,53 +264,47 @@
     <!-- Location & Contact Section -->
     <section id="location" class="section location-section">
       <div class="container">
-        <h2 class="section-title">Bize Ulaşın</h2>
-        <div class="location-content">
-          <div class="address-box">
-            <i
-              class="fas fa-map-marker-alt address-icon"
-              style="
-                font-size: 3rem;
-                color: var(--primary);
-                margin-bottom: 20px;
-                display: block;
-              "
-            ></i>
-            <h3>Manton Cafe</h3>
-            <p>
-              <strong>Telefon:</strong> 0505 561 39 57<br /><br />
-              Atatürk, 34307 Küçükçekmece/İstanbul,<br />
-              Türkiye
-            </p>
+        <h2 class="section-title">İletişim & Konum</h2>
 
-            <div class="contact-buttons">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="info-text">
+                <h4>Adresimiz</h4>
+                <p>Atatürk, 34307 Küçükçekmece/İstanbul, Türkiye</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="info-text">
+                <h4>Telefon</h4>
+                <p>0531 738 62 58</p>
+              </div>
+            </div>
+
+            <div class="contact-actions">
               <a
-                href="https://www.google.com/maps/place/Manton+Cafe/@41.0439901,28.7577715,15z/data=!4m11!1m3!2m2!1scafe!6e5!3m6!1s0x14caa5eea076e5f7:0xd8044cf6d2da716!8m2!3d41.0439901!4d28.7768259!15sCgRjYWZlWgYiBGNhZmWSAQRjYWZlmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVI0ZVdaRVptUjNFQUXgAQD6AQQIABBB!16s%2Fg%2F11fjzy2qlf?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D"
+                href="https://www.google.com/maps/place/Gazi+Beyrut+Restaurant/@41.1044448,28.8942118,17z/data=!3m1!4b1!4m6!3m5!1s0x14cab1004e011ae1:0xee29247ed1fdaf10!8m2!3d41.1044408!4d28.8967867!16s%2Fg%2F11xn9jkwvm?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D"
                 target="_blank"
-                class="btn btn-map"
+                class="btn-social"
               >
-                <i class="fas fa-route"></i> Haritada Gör
+                <i class="fas fa-map-marked-alt"></i> Haritada Aç
               </a>
               <a
-                href="https://www.instagram.com/manton_cafe/"
+                href="https://www.instagram.com/gazibeyrut.restaurant/"
                 target="_blank"
-                class="btn btn-instagram"
+                class="btn-social"
               >
-                <i class="fab fa-instagram"></i> Instagram'da Takip Et
-              </a>
-              <!-- This is the MAIN cart button now -->
-              <a
-                href="javascript:void(0)"
-                class="btn btn-whatsapp"
-                id="whatsappCartBtn"
-              >
-                <i class="fab fa-whatsapp"></i> WhatsApp ile Sipariş Ver
+                <i class="fab fa-instagram"></i> Instagram
               </a>
             </div>
           </div>
-          <div class="map-box">
+
+          <div class="map-container">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.660144598144!2d28.7577715!3d41.0439901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa5eea076e5f7%3A0xd8044cf6d2da716!2sManton%20Cafe!5e0!3m2!1str!2str!4v1717580000000!5m2!1str!2str"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3006.126581898144!2d28.8942118!3d41.1044408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab1004e011ae1%3A0xee29247ed1fdaf10!2sGazi%20Beyrut%20Restaurant!5e0!3m2!1str!2str!4v1717580000000!5m2!1str!2str"
               width="100%"
               height="100%"
               style="border: 0"
@@ -263,14 +316,24 @@
       </div>
     </section>
 
+    <!-- Floating Cart Button -->
+    <div class="floating-cart">
+      <a href="javascript:void(0)" id="whatsappCartBtn">
+        <i class="fab fa-whatsapp"></i> WhatsApp ile Sipariş Ver
+      </a>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container footer-content">
         <div class="footer-brand">
-          <img src="logo2.png" alt="Manton Cafe" class="footer-logo" />
-          <span class="web-service-text">Manton Cafe | Restoran & Cafe</span>
+          <!-- Footer Logo Filtered to white via CSS -->
+          <img src="logo2.png" alt="Gazi Beyrut" class="footer-logo" />
+          <span class="web-service-text">Gazi Beyrut | Lezzet Dünyası</span>
         </div>
-        <p class="copyright">&copy; 2026 Manton Cafe. Tüm hakları saklıdır.</p>
+        <p class="copyright">
+          &copy; 2026 Gazi Beyrut Restaurant. Tüm hakları saklıdır.
+        </p>
       </div>
     </footer>
 

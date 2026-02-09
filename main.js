@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const whatsappCartBtn = document.getElementById("whatsappCartBtn");
 
   // State
-  const phoneNumber = "905055613957";
+  const phoneNumber = "905317386258";
   let cart = JSON.parse(localStorage.getItem("mantonCart")) || [];
 
   // Initialize
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 3. Render Quantity Control
   function renderQtyControl(container, name, price, quantity) {
     // Clear existing button or control
-    const existingBtn = container.querySelector(".btn-fat-turquoise");
+    const existingBtn = container.querySelector(".btn-add");
     if (existingBtn) existingBtn.style.display = "none";
 
     // Check if control already exists
@@ -120,8 +120,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const control = container.querySelector(".qty-control");
       if (control) control.remove();
 
-      const btn = container.querySelector(".btn-fat-turquoise");
-      if (btn) btn.style.display = "inline-flex";
+      const btn = container.querySelector(".btn-add");
+      if (btn) btn.style.display = "flex";
     } else {
       // Update UI Number
       const control = container.querySelector(".qty-control");
